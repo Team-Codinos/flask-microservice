@@ -2,10 +2,14 @@
 import numpy as np
 from flask import Flask, request, jsonify
 import pickle
+from flask_cors import CORS
+
 
 zeroes=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
 
 app = Flask(__name__)
+CORS(app)
+
 # Load the model
 model = pickle.load(open('model1.pkl','rb'))
 
