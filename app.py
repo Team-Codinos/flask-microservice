@@ -13,6 +13,10 @@ CORS(app)
 # Load the model
 model = pickle.load(open('model1.pkl','rb'))
 
+@app.route('/',methods=['GET'])
+def predict():
+    return 'hehe'
+
 
 @app.route('/api',methods=['POST'])
 def predict():
@@ -49,7 +53,6 @@ def predict():
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     app.run(port=8080, debug=False)
 
 
