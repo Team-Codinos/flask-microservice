@@ -14,7 +14,7 @@ CORS(app)
 model = pickle.load(open('model1.pkl','rb'))
 
 @app.route('/',methods=['GET'])
-def predict():
+def hehe():
     return 'hehe'
 
 
@@ -45,6 +45,7 @@ def predict():
     
     
     predict_list=[year,male_percent,no_of_schools,cost_of_education]
+    predict_list.extend(state)
         
     
     prediction = model.predict([np.array(predict_list)])
