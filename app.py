@@ -46,6 +46,8 @@ def predict():
     
     predict_list=[year,male_percent,no_of_schools,cost_of_education]
     predict_list.extend(state)
+    
+    #trigger
         
     
     prediction = model.predict([np.array(predict_list)])
