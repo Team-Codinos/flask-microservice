@@ -49,6 +49,7 @@ def predict():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run(port=8080, debug=False)
 
 
@@ -105,3 +106,4 @@ def state_gen(state):
         
 
 
+    app.run(port=8080, debug=False,host="0.0.0.0")
